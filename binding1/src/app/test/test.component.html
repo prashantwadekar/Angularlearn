@@ -1,0 +1,17 @@
+<p>test works!</p>
+<h2><i>1.One Way Binding</i></h2>
+<h1>{{appName}}</h1>
+<h2><i>2.Event Binding</i> &nbsp;</h2>
+<button (click)="showData($event)">Click here</button>
+<h2><i>3.Property Binding</i> &nbsp;</h2>
+<input type="text" [value]="userName">
+<h2><i>4.class Binding</i> &nbsp;</h2>
+<p [class]="myCSSClass">This paragraph class comes from *myClass* property </p> 
+<p [class.blue]="applyCSSClass">This paragraph class does not apply</p>
+<h2><i>5.style Binding</i> &nbsp;</h2>
+<p [style.color]="myColor">Text color is styled using style binding</p>
+
+
+<!-- <button on-click = "showData($event)">Click here</button> -->
+
+    

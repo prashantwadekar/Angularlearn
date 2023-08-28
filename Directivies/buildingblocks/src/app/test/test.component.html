@@ -1,0 +1,54 @@
+
+<p>test works!</p>
+<div *ngIf="true">Display Data</div>
+<p>ngIfElse example!</p> 
+<div *ngIf="isLogIn; else isLogOut"> 
+   Hello you are logged in 
+</div>
+<ng-template #isLogOut> 
+   You're logged out.. 
+</ng-template>
+<h2>ng For Directive</h2>
+<ul>
+    <li *ngFor="let i of list">
+        {{i}}
+    </li>
+</ul>
+
+
+<h2>Track For</h2>
+<ul>
+    <li *ngFor="let std of studentArr; trackBy: trackByData">{{ std.name }}</li>
+</ul>
+
+<h2>ngSwitch directive</h2> 
+<ul [ngSwitch]="logInName"> 
+   <li *ngSwitchCase="'user'"> 
+      <p>User is logged in..</p> 
+   </li> 
+   <li *ngSwitchCase="'admin'"> 
+      <p>admin is logged in</p> 
+   </li> 
+   <li *ngSwitchDefault> 
+      <p>Please choose login name</p> 
+   </li> 
+</ul>
+
+<h1>Test Component</h1>
+
+<app-child [userName]="name1"></app-child>
+
+<h2>ng class</h2>
+<div class="container"> 
+   <br/> 
+   <div *ngFor="let user of users" [ngClass]="{ 
+      'highlight':user.userName === 'User1' 
+   }"> 
+   
+   {{ user.userName }} 
+</div> 
+</div>
+
+
+
+
